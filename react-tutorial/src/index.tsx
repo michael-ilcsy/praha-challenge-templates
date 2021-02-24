@@ -2,13 +2,13 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import './index.css'
 
-type SquareProps = {
+export type SquareProps = {
   value: SquareInnerValue
   onClick: () => void
 }
 type SquareInnerValue = "O" | 'X' | null
 
-const Square: React.FC<SquareProps> = ({ value, onClick }) => (
+export const Square: React.FC<SquareProps> = ({ value, onClick }) => (
   <button className="square" onClick={onClick}>
     {value}
   </button>
