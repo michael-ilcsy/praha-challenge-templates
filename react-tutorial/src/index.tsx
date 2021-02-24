@@ -19,7 +19,7 @@ type BoardProps = {
   onClick: (i: number) => void
 }
 
-class Board extends React.Component<BoardProps> {
+export class Board extends React.Component<BoardProps> {
   renderSquare(i: number) {
     return (<Square
       value={this.props.squares[i]}
@@ -57,7 +57,7 @@ type GameState = {
   xIsNext: boolean
 }
 
-class Game extends React.Component<GameProps, GameState> {
+export class Game extends React.Component<GameProps, GameState> {
   constructor(props: GameProps) {
     super(props)
     this.state = {
